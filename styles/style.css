@@ -96,7 +96,7 @@
   font-weight: 400;
   text-transform: uppercase;
   color: rgba(0, 0, 0);
-  -webkit-text-stroke: 1px var(--text-stroke-color); 
+  -webkit-text-stroke: 1px var(--text-stroke-color);
   mix-blend-mode: hard-light;
   z-index: 2
 }
@@ -168,11 +168,6 @@
   align-items: center;
 }
 
-.card__icon-button {
-  overflow: visible;
-  position: relative;
-}
-
 .card__like-button {
   position: relative;
   display: flex;
@@ -235,6 +230,8 @@
   outline: 0;
   transition: box-shadow 0.3s ease;
   border-radius: 0;
+  overflow: visible;
+  position: relative;
 }
 
 .card__icon-button:focus {
