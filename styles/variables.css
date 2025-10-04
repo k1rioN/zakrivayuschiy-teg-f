@@ -20,8 +20,8 @@
     transparent 4px
   ),
   linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
-  --container-width-desctop: clamp(375px, 700px, 1200px);
-  --container-width-mobile: 100vw;
+  --container-width-desctop: 700px;
+  --container-width-mobile: 100%;
   --text-stroke-color: #FFFFFF;
   --text-color: #FFFFFF;
   --bg-color: #FFFFFF;

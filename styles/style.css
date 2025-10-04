@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-main), sans-serif;
+  font-family: var(--font-main), fantasy;
   font-variation-settings: 'wght' var(--text-font-weight);
   background-image: var(--complex-gradient);
   background-size: cover;
@@ -24,7 +24,9 @@
 }
 
 .container {
-  width: var(--container-width-desctop);
+  width: 100%;
+  max-width: var(--container-width-desctop);
+  margin: 0 auto;
 }
 
 .header {
@@ -40,14 +42,14 @@
 }
 
 .logo {
-  font-family: var(--font-accent), sans-serif;
+  font-family: var(--font-accent), fantasy;
   font-size: 65px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .title {
-  font-family: var(--font-accent), sans-serif;
+  font-family: var(--font-accent), fantasy;
   font-size: 23px;
   text-transform: uppercase;
 }
@@ -74,7 +76,7 @@
 
 .card-heading {
   grid-row: 1;
-  font-family: var(--font-main), sans-serif;
+  font-family: var(--font-main), fantasy;
   font-size: 18px;
   font-variation-settings: 'wght' 715;
   padding-inline: 10px;
@@ -91,7 +93,7 @@
   opacity: 0.5;
   top: 25px;
   right: 25px;
-  font-family: var(--font-accent), sans-serif;
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -159,7 +161,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  font-family: var(--font-main), sans-serif;
+  font-family: var(--font-main), fantasy;
   font-size: 18px;
   font-variation-settings: 'wght' 410;
   margin-block: 20px;
@@ -218,18 +220,15 @@
   transform: scaleX(1);
 }
 
-.button:hover .floppy-icon {
-  filter: invert(1);
-}
-
 .button__text {
   position: relative;
-  font-family: var(--font-accent), sans-serif;
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   font-weight: 400;
   text-transform: capitalize;
   z-index: 2;
   mix-blend-mode: difference;
+  color: #FFFFFF;
 }
 
 .card__icon-button {
@@ -294,7 +293,7 @@
 
 .like-icon:active .main-body {
   fill: var(--animation-main-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s 0.05s;
 }
 
 .like-icon:active .core {
@@ -337,10 +336,10 @@
 .floppy-icon {
   width: 21px;
   height: 21px;
-  fill: #000000;
+  fill: #FFFFFF;
   position: relative;
   z-index: 2;
-  transition: filter 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .save-dialog-wrapper {
@@ -366,7 +365,7 @@
 }
 
 .save-dialog-wrapper[open]::backdrop {
-  backdrop-filter: brightness(0.75);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .save-dialog-content {
@@ -377,7 +376,7 @@
 }
 
 .dialog__text {
-  font-family: var(--font-accent), sans-serif;
+  font-family: var(--font-accent), fantasy;
   font-size: 14px;
   max-inline-size: 234px;
   line-height: 1.5em;
@@ -390,7 +389,7 @@
 
 @media (width <= 375px) {
   .container {
-    width: var(--container-width-mobile);
+    max-width: var(--container-width-mobile);
   }
 
   .header {
